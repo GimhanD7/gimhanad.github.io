@@ -60,3 +60,12 @@ body{
 .navbar a.active{
     color: var(--main-color);
 }
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+
+}
+
+/* home selection design */
