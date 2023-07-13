@@ -34,7 +34,7 @@
         <div class="home-content">
             <h3>Hello, Its Me</h3>
             <h1>Gimhana Deshapriya</h1>
-            <h3>And I'm a <span>Web Developer</span></h3>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sed labore magni perspiciatis ipsa architecto? Maxime </p>
 
@@ -171,7 +171,7 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
-
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
 <!-- /* <----------------link to the Javascript--------------->  
                         <script >
@@ -225,7 +225,17 @@
                             ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
                             ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
+                            // ----------------typed.js --------------------------     
+                            const typed=new Typed('.multiple-text',{
+                                strings:['Web Developer', 'Graphic Designer','Social Media Influencer'],
+                                typeSpeed:100,
+                                backSpeed:100,
+                                backDelay:1000,
+                                loop:true
+                            });
+
 
                         </script>
+                       
 </body>
 </html>
