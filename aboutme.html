@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+        <!-- css link -->
+        <link rel="stylesheet" href="css/grphicStyles.css">
+        <!-- box icon -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- javascript  -->
+        <!-- <script src="js/scripts.js"></script> -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+     <!-- header design -->
+     <header class="header">
+        <a href="#" class="logo"> Portfolio</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home" class="active">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#service">Services</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact </a>
+        </nav>
+    </header>
+
+
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/about-img.png" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Web Developer, Graphic Designer</h3>
+            <p>I 'm Gimhana Deshapriya, a 23-year-old IT specialization student at SLIIT, is making remarkable strides in my professional journey. I currently hold the position of Editor at the Company of Environment Social Media Collection, showcasing my expertise in social media management and content creation. Additionally, I have been entrusted with creating the DAY Post for the Leo Club of SLIIT, exemplifying my commitment to community engagement. I avid interest in new technologies and profound knowledge of social media platforms enables I to leverage these tools effectively. Known for I creative prowess, approaches I work with honesty, integrity, and an unwavering appreciation for harmony. I'm exceptional qualities and skills make my an invaluable asset in any professional setting.</p>
+
+   
+
+   
+        </div> </section>
+        <section class="services" id="Qualification">
+            <h2 class="heading">My <span>Qualification</span></h2>
+            <div class="services-container">
+             <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                    <h3>Education</h3>
+                    <a href="#web" class="btn">Read More</a>    
+        
+            </div>
+            <div class="services-box">
+                <img src="img/lion.png" alt="">
+                <h3>Volunteering   </h3>
+                <a href="#leo" class="btn">Read More</a>    
+    
+            </div>
+            <div class="services-box">
+                <i class='bx bx-palette' ></i>
+                <h3>Skill </h3>
+                <a href="#media" class="btn">Read More</a>    
+    
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-meta' ></i>
+                <h3>Experience</h3>
+                <a href="#social" class="btn">Read More</a>    
+    
+            </div>
+            
+        </div>
+        </section>
+   
+    
+    
+
+
+
+
+
+
+
+
+
+     <!-- footer <section></section> -->
+     <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by GimhanD | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt' ></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- /* <----------------link to the Javascript--------------->  
+        <script >
+            // ---------------toggle------------
+    let menuIcon=document.querySelector('#menu-icon');
+    let navbar=document.querySelector(' .navbar');
+
+    menuIcon.onclick = ()=>{
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('active');
+    };
+
+
+    let sections=document.querySelectorAll('section');
+    let navLinks=document.querySelectorAll('header nav a');
+
+    window.onscroll=()=>{
+        sections.forEach(sec=>{
+            let top =window.scrollY;
+            let offset=sec.offsetTop - 150;
+            let height =sec.offsetHeight;
+            let id =sec.getAttribute('id');
+
+            if(top>= offset&&top<offset+height){
+                navLinks.forEach(links=>{
+                    links.classList.remove('active');
+                    document.querySelector('header nav a[href*='+id+']').classList.add('active');
+                });
+            };
+        });
+
+        // ---------------sticky navbar  -----------------
+        let header=document.querySelector('header');
+        header.classList.toggle('sticky',window.screenY>100);
+
+        //--------------toggle sticky navbar-------------
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+
+
+    } ;
+    //------------------scroolize--------------------
+    ScrollReveal({ 
+        reset: true ,
+        distance:'80px' ,
+        duration:'2000',
+        delay:200
+    });
+    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+    ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+    ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+    // ----------------typed.js --------------------------     
+    const typed=new Typed('.multiple-text',{
+        strings:['Web Developer', 'Graphic Designer','Social Media Influencer'],
+        typeSpeed:100,
+        backSpeed:100,
+        backDelay:1000,
+        loop:true
+    });
+
+
+</script>
+</body>
+</html>
