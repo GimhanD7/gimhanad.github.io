@@ -173,9 +173,9 @@
 
 
 
-
+<!-- /* <----------------link to the Javascript--------------->  
                         <script >
-                                    // toggle
+                                    // ---------------toggle------------
                             let menuIcon=document.querySelector('#menu-icon');
                             let navbar=document.querySelector(' .navbar');
 
@@ -203,17 +203,17 @@
                                     };
                                 });
 
-                                // sticky navbar  
+                                // ---------------sticky navbar  -----------------
                                 let header=document.querySelector('header');
                                 header.classList.toggle('sticky',window.screenY>100);
 
-                                //toggle sticky navbar
+                                //--------------toggle sticky navbar-------------
                                 menuIcon.classList.remove('bx-x');
                                 navbar.classList.remove('active');
 
 
                             } ;
-                            //scroolize
+                            //------------------scroolize--------------------
                             ScrollReveal({ 
                                 reset: true ,
                                 distance:'80px' ,
@@ -221,6 +221,8 @@
                                 delay:200
                             });
                             ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+                            ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact form', { origin: 'bottom' });
+
                         </script>
 </body>
 </html>
