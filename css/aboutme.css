@@ -90,6 +90,7 @@ section{
 .home-img img{
     width: 40vw;
     animation: floatImage 4s ease-in-out infinite ;
+    z-index: 2;
 }
 @keyframes floatImage {
     0%{
@@ -103,6 +104,24 @@ section{
     }
     
 }
+/* .home-img img .home1{
+    position:static ;
+    width: 40vw;
+    animation: floatImage1 4s ease-in-out infinite ;
+    z-index: -1;
+}
+@keyframes floatImage1 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+} */
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
@@ -198,57 +217,18 @@ span{
     gap: 2rem;
 
 }
-.count-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-}
 
 .services-container .services-box{
-    flex: 1 1  20rem;
+    flex: 1 1 30rem;
     background: var(--second-bg-color1);
-    padding: 3rem 2rem 3rem ;
+    padding: 3rem 2rem 4rem ;
     border-radius: 2rem;
     text-align: center;
     border: .2rem  ;
     transition: .5s ease ;
-    margin-bottom: 10rem;
-}
-.qulif-container .qulif-box{
-    flex: 4 4  40rem;
-    /* background: var(--second-bg-color1); */
-    padding: 3rem 2rem 3rem ;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem  ;
-    transition: .5s ease ;
-    margin-bottom: 2rem;
 }
 
-.count-container .count-box{
-    flex: 3 3  30rem;
-    background: var(--second-bg-color1);
-    padding: 3rem 2rem 3rem ;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem  ;
-    transition: .5s ease ;
-    margin-bottom: 2rem;
-}
 .services-container .services-box:hover{
-    border: .2rem solid;
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-.qulif-container .qulif-box:hover{
-    border: .2rem solid;
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-.count-container .count-box:hover{
     border: .2rem solid;
     border-color: var(--main-color);
     transform: scale(1.02);
@@ -257,42 +237,14 @@ span{
     font-size: 7rem;
     color: var(--main-color);
 }
-.count-box i{
-    font-size: 7rem;
-    color: var(--main-color);
-}
-.services-box img{
-    width: 6rem;
-    color: var(--main-color);
-}
-.count-box img{
-    width: 6rem;
-    color: var(--main-color);
-}
 .services-box h3{
-    font-size: 2.6rem;
-}
-.count-box h3{
     font-size: 2.6rem;
 }
 .services-box p{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
-.qulif-box h1{
-    font-size: 5rem;
-    /* padding: 0; */
 
-}
-.qulif-box h2{
-    font-size: 3rem;
-    /* padding: 0; */
-}
-.qulif-box p{
-    font-size: 2rem;
-    margin: 1rem 0 3rem;
-
-}
 .portfolio{
     background: var(--second-bg-color1);
 }
@@ -303,7 +255,7 @@ span{
 
 .portfolio-container {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(3,1fr);
     align-items: center;
     gap: 2.5rem;
 }
